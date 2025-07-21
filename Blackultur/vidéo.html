@@ -6,6 +6,7 @@
     <title>BLACKULTUR - Culture Urbaine & Décryptage</title>
     <link rel="stylesheet" href="accueil.css">
 </head>
+
 <body>
     <header class="header">
         <div class="header-top">
@@ -21,7 +22,7 @@
                     <li><a href="rap.html">Rap</a></li>
                     <li><a href="culture.html">Culture</a></li>
                     <li><a href="analyse.html">Actualités</a></li>
-                    <li><a href="#">Vidéos</a></li>
+                    <li><a href="#" class="active">Vidéos</a></li>
                 </ul>
             </nav>
             <div class="social-header">
@@ -40,9 +41,21 @@
         </div>
     </section>
 
+    <div class="categories-bar">
+        <div class="categories-container">
+            <nav class="categories-nav">
+                <button class="window-nav" onclick="moveWindow('C-Vlogs',350)">Vlogs</button>
+                <button class="window-nav" onclick="moveWindow('C-Docu',850)">Documentaires</button>
+                <button class="window-nav" onclick="moveWindow('C-Itw',1400)">Interviews</button>
+            </nav>
+        </div>
+    </div>
+
+    
+    <!-- Premier carousel (Vlogs) -->
     <div class="carousel-container">
-        <h2 class="carousel-title">Vlogs</h2>
-        
+        <h2 class="carousel-title" id="C-Vlogs">Vlogs</h2>
+
         <div class="carousel-wrapper">
             <div class="carousel" id="carousel">
                 <a href="#">
@@ -50,7 +63,6 @@
                         <div class="article-date">21 Décembre 2024</div>
                         <h3 class="article-title">Bercy de Joé Dwèt Filé</h3>
                         <img src="blackulturLogo.jpg" width="120">
-
                     </div>
                 </a>
 
@@ -97,49 +109,124 @@
         <div class="carousel-dots" id="dots"></div>
     </div>
 
-    <!-- Deuxième carousel (Documentaires) -->
-<div class="carousel-container" id="carousel-container-2">
-    <h2 class="carousel-title">Documentaires</h2>
     
-    <div class="carousel-wrapper">
-        <div class="carousel" id="carousel-2">
-            <div class="article-card-2">
-                <div class="article-date">15 Juillet 2025</div>
-                <h3 class="article-title">Histoire du Hip-Hop français</h3>
-                <p class="article-excerpt">Plongée dans les origines et l'évolution du mouvement hip-hop en France depuis les années 80...</p>
-                <span class="article-category">Documentaire</span>
-            </div>
+    <!-- Deuxième carousel (Documentaires) -->
+    <div class="carousel-container" id="carousel-container-2">
+        <h2 class="carousel-title" id="C-Docu">Documentaires</h2>
+    
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel-2">
+                <div class="article-card-2">
+                    <div class="article-date">15 Juillet 2025</div>
+                    <h3 class="article-title">Histoire du Hip-Hop français</h3>
+                    <p class="article-excerpt">Plongée dans les origines et l'évolution du mouvement hip-hop en France depuis les années 80...</p>
+                    <span class="article-category">Documentaire</span>
+                </div>
 
-            <div class="article-card-2">
-                <div class="article-date">10 Juillet 2025</div>
-                <h3 class="article-title">Banlieues : Culture et Identité</h3>
-                <p class="article-excerpt">Exploration sociologique des codes culturels dans les quartiers urbains français...</p>
-                <span class="article-category">Société</span>
-            </div>
+                <div class="article-card-2">
+                    <div class="article-date">10 Juillet 2025</div>
+                    <h3 class="article-title">Banlieues : Culture et Identité</h3>
+                    <p class="article-excerpt">Exploration sociologique des codes culturels dans les quartiers urbains français...</p>
+                    <span class="article-category">Société</span>
+                </div>
 
-            <div class="article-card-2">
-                <div class="article-date">5 Juillet 2025</div>
-                <h3 class="article-title">Génération Streaming</h3>
-                <p class="article-excerpt">Comment les plateformes digitales ont révolutionné la diffusion de la culture urbaine...</p>
-                <span class="article-category">Tech</span>
-            </div>
+                <div class="article-card-2">
+                    <div class="article-date">5 Juillet 2025</div>
+                    <h3 class="article-title">Génération Streaming</h3>
+                    <p class="article-excerpt">Comment les plateformes digitales ont révolutionné la diffusion de la culture urbaine...</p>
+                    <span class="article-category">Tech</span>
+                </div>
 
-            <div class="article-card-2">
-                <div class="article-date">1 Juillet 2025</div>
-                <h3 class="article-title">Femmes dans le Rap</h3>
-                <p class="article-excerpt">Portrait des artistes féminines qui bousculent les codes du rap français contemporain...</p>
-                <span class="article-category">Portrait</span>
+                <div class="article-card-2">
+                    <div class="article-date">1 Juillet 2025</div>
+                    <h3 class="article-title">Femmes dans le Rap</h3>
+                    <p class="article-excerpt">Portrait des artistes féminines qui bousculent les codes du rap français contemporain...</p>
+                    <span class="article-category">Portrait</span>
+                </div>
             </div>
         </div>
+
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel2(-1, 2)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel2(1, 2)">›</button>
+
+        <div class="carousel-dots2" id="dots-2"></div>
     </div>
 
-    <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1, 2)">‹</button>
-    <button class="carousel-nav carousel-next" onclick="moveCarousel(1, 2)">›</button>
 
-    <div class="carousel-dots2" id="dots-2"></div>
-</div>
 
-<script src="main.js"></script>
+    <!-- Troisième carousel (Interview) -->
+    <div class="carousel-container" id="carousel-container-3">
+        <h2 class="carousel-title" id="C-Itw">Interviews</h2>
+    
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel-3">
+                <div class="article-card-3">
+                    <div class="article-date">15 Juillet 2025</div>
+                    <h3 class="article-title">Histoire du Hip-Hop français</h3>
+                    <p class="article-excerpt">Plongée dans les origines et l'évolution du mouvement hip-hop en France depuis les années 80...</p>
+                    <span class="article-category">Documentaire</span>
+                </div>
+
+                <div class="article-card-3">
+                    <div class="article-date">10 Juillet 2025</div>
+                    <h3 class="article-title">Banlieues : Culture et Identité</h3>
+                    <p class="article-excerpt">Exploration sociologique des codes culturels dans les quartiers urbains français...</p>
+                    <span class="article-category">Société</span>
+                </div>
+
+                <div class="article-card-3">
+                    <div class="article-date">5 Juillet 2025</div>
+                    <h3 class="article-title">Génération Streaming</h3>
+                    <p class="article-excerpt">Comment les plateformes digitales ont révolutionné la diffusion de la culture urbaine...</p>
+                    <span class="article-category">Tech</span>
+                </div>
+
+                <div class="article-card-3">
+                    <div class="article-date">1 Juillet 2025</div>
+                    <h3 class="article-title">Femmes dans le Rap</h3>
+                    <p class="article-excerpt">Portrait des artistes féminines qui bousculent les codes du rap français contemporain...</p>
+                    <span class="article-category">Portrait</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel3(-1, 2)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel3(1, 2)">›</button>
+
+        <div class="carousel-dots3" id="dots-3"></div>
+    </div>
+
+    <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Blackultur</h4>
+                    <a href="#">À propos</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Équipe</a>
+                    <a href="#">Mentions légales</a>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <a href="rap.html">Rap</a>
+                    <a href="culture.html">Culture afro</a>
+                    <a href="analyse.html">Actualités</a>
+                    <a href="#">Vidéo</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Réseaux sociaux</h4>
+                    <a href="https://x.com/blackultur_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Twitter</a>
+                    <a href="https://www.tiktok.com/@blackultur_?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+                    <a href="https://www.youtube.com/@blackultur_" target="_blank">YouTube</a>
+                    <a href="https://www.instagram.com/blackultur_/" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Blackultur. Tous droits réservés.</p>
+            </div>
+        </footer>
+
+    <script src="main.js"></script>
 </body>
 
     
