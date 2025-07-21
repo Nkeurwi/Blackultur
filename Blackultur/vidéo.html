@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLACKULTUR - Culture Urbaine & Décryptage</title>
+    <link rel="stylesheet" href="accueil.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            NOUVEAU : Décryptage exclusif de la culture urbaine française
+        </div>
+        <div class="header-main">
+            <a href="index.html">
+                <img src="blackulturLogo.jpg" width="200" alt="Logo Blackultur">
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="rap.html">Rap</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="analyse.html">Actualités</a></li>
+                    <li><a href="#">Vidéos</a></li>
+                </ul>
+            </nav>
+            <div class="social-header">
+                <a href="https://x.com/blackultur_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icon" target="_blank"> <img src="logo-twitter-x.webp" width="20" alt="X"></a>
+                <a href="https://www.instagram.com/blackultur_/" class="social-icon" target="_blank"><img src="insta.png" width="20" alt="insta"></a>
+                <a href="https://www.youtube.com/@blackultur_" class="social-icon" target="_blank"><img src="ytb.png" width="20" alt="youtube"></a>
+                <a href="https://www.tiktok.com/@blackultur_?is_from_webapp=1&sender_device=pc" class="social-icon" target="_blank"> <img src="tiktok.png" width="20" alt="tiktok"></a>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">VIDÉOS</h1>
+            <p class="hero-subtitle">Vlogs • Documentaires • Interviews</p>
+        </div>
+    </section>
+
+    <div class="carousel-container">
+        <h2 class="carousel-title">Vlogs</h2>
+        
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel">
+                <a href="#">
+                    <div class="article-card">
+                        <div class="article-date">21 Décembre 2024</div>
+                        <h3 class="article-title">Bercy de Joé Dwèt Filé</h3>
+                        <img src="blackulturLogo.jpg" width="120">
+
+                    </div>
+                </a>
+
+                <div class="article-card">
+                    <div class="article-date">12 Juillet 2025</div>
+                    <h3 class="article-title">Culture Urbaine : Les Nouvelles Tendances</h3>
+                    <p class="article-excerpt">Découverte des mouvements culturels émergents dans les grandes métropoles françaises...</p>
+                    <span class="article-category">Culture</span>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-date">10 Juillet 2025</div>
+                    <h3 class="article-title">Interview Exclusive : PNL</h3>
+                    <p class="article-excerpt">Rencontre avec le duo le plus mystérieux du rap français pour parler de leur parcours unique...</p>
+                    <span class="article-category">Interview</span>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-date">8 Juillet 2025</div>
+                    <h3 class="article-title">Street Art : L'art dans la rue</h3>
+                    <p class="article-excerpt">Exploration de l'art urbain contemporain et de ses artistes qui transforment nos villes...</p>
+                    <span class="article-category">Art</span>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-date">5 Juillet 2025</div>
+                    <h3 class="article-title">Mode Urbaine : Style et Identité</h3>
+                    <p class="article-excerpt">Comment la mode urbaine reflète les codes sociaux et l'identité des nouvelles générations...</p>
+                    <span class="article-category">Mode</span>
+                </div>
+
+                <div class="article-card">
+                    <div class="article-date">3 Juillet 2025</div>
+                    <h3 class="article-title">Festivals d'Été : Notre Sélection</h3>
+                    <p class="article-excerpt">Les événements incontournables de cet été pour vibrer au rythme de la culture urbaine...</p>
+                    <span class="article-category">Événements</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1)">‹</button>
+        <button class="carousel-nav carousel-next" onclick="moveCarousel(1)">›</button>
+
+        <div class="carousel-dots" id="dots"></div>
+    </div>
+
+    <!-- Deuxième carousel (Documentaires) -->
+<div class="carousel-container" id="carousel-container-2">
+    <h2 class="carousel-title">Documentaires</h2>
+    
+    <div class="carousel-wrapper">
+        <div class="carousel" id="carousel-2">
+            <div class="article-card-2">
+                <div class="article-date">15 Juillet 2025</div>
+                <h3 class="article-title">Histoire du Hip-Hop français</h3>
+                <p class="article-excerpt">Plongée dans les origines et l'évolution du mouvement hip-hop en France depuis les années 80...</p>
+                <span class="article-category">Documentaire</span>
+            </div>
+
+            <div class="article-card-2">
+                <div class="article-date">10 Juillet 2025</div>
+                <h3 class="article-title">Banlieues : Culture et Identité</h3>
+                <p class="article-excerpt">Exploration sociologique des codes culturels dans les quartiers urbains français...</p>
+                <span class="article-category">Société</span>
+            </div>
+
+            <div class="article-card-2">
+                <div class="article-date">5 Juillet 2025</div>
+                <h3 class="article-title">Génération Streaming</h3>
+                <p class="article-excerpt">Comment les plateformes digitales ont révolutionné la diffusion de la culture urbaine...</p>
+                <span class="article-category">Tech</span>
+            </div>
+
+            <div class="article-card-2">
+                <div class="article-date">1 Juillet 2025</div>
+                <h3 class="article-title">Femmes dans le Rap</h3>
+                <p class="article-excerpt">Portrait des artistes féminines qui bousculent les codes du rap français contemporain...</p>
+                <span class="article-category">Portrait</span>
+            </div>
+        </div>
+    </div>
+
+    <button class="carousel-nav carousel-prev" onclick="moveCarousel(-1, 2)">‹</button>
+    <button class="carousel-nav carousel-next" onclick="moveCarousel(1, 2)">›</button>
+
+    <div class="carousel-dots2" id="dots-2"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+
+    
