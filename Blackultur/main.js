@@ -6,9 +6,11 @@
 let currentSlide = 0;
 let currentSlide2 = 0;
 let currentSlide3 = 0;
+let currentSlide4 = 0;
 let autoplayInterval;
 let autoplayInterval2;
 let autoplayInterval3;
+let autoplayInterval4;
 
 // Variables pour le support tactile
 let startX = 0;
@@ -318,6 +320,63 @@ function goToSlide3(slide) {
 }
 
 /* ==========================================================================
+   CAROUSEL 4
+   ========================================================================== */
+
+function initializeCarousel4() {
+    const carousel4 = document.getElementById('carousel-4');
+    const articles4 = document.querySelectorAll('.article-card-4');
+    const totalSlides4 = Math.ceil(articles4.length / 3);
+    const dotsContainer4 = document.getElementById('dots-4');
+    
+    if (!carousel4 || !dotsContainer4) return;
+    
+    // Créer les points de navigation
+    createCarouselDots(dotsContainer4, totalSlides4, 'carousel-dot4', goToSlide4);
+    
+    // Initialiser l'autoplay
+    startAutoplay4();
+    
+    // Ajouter les événements de survol
+    addCarouselHoverEvents(carousel4, 4);
+    
+    // Ajouter le support tactile
+    addTouchSupport(carousel4, moveCarousel4);
+}
+
+function updateCarousel4() {
+    const carousel4 = document.getElementById('carousel-4');
+    if (!carousel4) return;
+    
+    carousel4.style.transform = `translateX(-${currentSlide4 * SLIDE_WIDTH * 3}px)`;
+    
+    // Mettre à jour les dots
+    document.querySelectorAll('.carousel-dot4').forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide4);
+    });
+}
+
+function moveCarousel4(direction) {
+    const articles4 = document.querySelectorAll('.article-card-4');
+    const totalSlides4 = Math.ceil(articles4.length / 3);
+    
+    currentSlide4 += direction;
+    
+    if (currentSlide4 < 0) {
+        currentSlide4 = totalSlides4 - 1;
+    } else if (currentSlide4 >= totalSlides4) {
+        currentSlide4 = 0;
+    }
+    
+    updateCarousel4();
+}
+
+function goToSlide4(slide) {
+    currentSlide4 = slide;
+    updateCarousel4();
+}
+
+/* ==========================================================================
    FONCTIONS UTILITAIRES POUR LES CAROUSELS
    ========================================================================== */
 
@@ -349,6 +408,12 @@ function startAutoplay3() {
     }, AUTOPLAY_DELAY);
 }
 
+function startAutoplay4() {
+    autoplayInterval4 = setInterval(() => {
+        moveCarousel4(1);
+    }, AUTOPLAY_DELAY)
+}
+
 function addCarouselHoverEvents(carousel, carouselNumber) {
     carousel.addEventListener('mouseenter', () => {
         if (carouselNumber === 1) {
@@ -357,6 +422,8 @@ function addCarouselHoverEvents(carousel, carouselNumber) {
             clearInterval(autoplayInterval2);
         } else if (carouselNumber === 3) {
             clearInterval(autoplayInterval3);
+        } else if (carouselNumber === 4) {
+            clearInterval(autoplayInterval4);
         }
     });
 
@@ -367,6 +434,8 @@ function addCarouselHoverEvents(carousel, carouselNumber) {
             startAutoplay2();
         } else if (carouselNumber === 3) {
             startAutoplay3();
+        } else if (carouselNumber === 4) {
+            startAutoplay4();
         }
     });
 }
@@ -426,6 +495,7 @@ function initializeAll() {
     initializeCarousel();
     initializeCarousel2();
     initializeCarousel3();
+    initializeCarousel4();
 }
 
 // Lancer l'initialisation quand le DOM est chargé
