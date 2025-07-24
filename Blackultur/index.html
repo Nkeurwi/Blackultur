@@ -13,14 +13,14 @@
         </div>
         <div class="header-main">
             <a href="index.html">
-                <img src="blackulturLogo.jpg" width="200" alt="Logo Blackultur">
+                <img src="blackulturLogo.jpg" width="200" alt="Logo Blackultur" id="logoBLK">
             </a>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="rap.html">Rap</a></li>
+                    <li><a href="#" class="active">Accueil</a></li>
+                    <li><a href="rap.html">Musique</a></li>
                     <li><a href="culture.html">Culture</a></li>
-                    <li><a href="analyse.html">Actualités</a></li>
+                    <li><a href="analyse.html">Analyses</a></li>
                     <li><a href="vidéo.html">Vidéos</a></li>
                 </ul>
             </nav>
@@ -35,27 +35,26 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">CULTURE AFRO</h1>
-            <p class="hero-subtitle">Décryptage • Analyses • Actualités</p>
+            <h1 class="hero-title">BLACKULTUR</h1>
+            <p class="hero-subtitle">Décryptages • Analyses • Actualités</p>
         </div>
     </section>
 
     <div class="categories-bar">
         <div class="categories-container">
             <nav class="categories-nav">
-                <a href="#" class="active">À la une</a>
-                <a href="rap.html">Rap français</a>
-                <a href="culture.html">Culture afro</a>
-                <a href="vidéo.html">Interviews</a>
+                <button class = "window-nav" onclick="moveWindow('News', -300)">À la une</button>
+                <a href="rap.html">Musique</a>
+                <a href="culture.html">Culture</a>
                 <a href="analyse.html">Analyses</a>
-                <a href="analyse.html">Actualités</a>
+                <a href="vidéo.html">Vidéos</a>
             </nav>
         </div>
     </div>
 
     <div class="main-container">
         <main class="articles-section">
-            <h2>Derniers Articles</h2>
+            <h2 id="News">Derniers Articles</h2>
             
             <article class="featured-article">
                 <div class="article-image">🎤</div>
@@ -162,17 +161,17 @@
             </div>
             <div class="footer-section">
                 <h4>Catégories</h4>
-                <a href="#">Rap français</a>
-                <a href="#">Culture africaine</a>
-                <a href="#">Analyses</a>
-                <a href="#">Définitions</a>
+                <a href="rap.html">Rap</a>
+                <a href="culture.html">Culture afro</a>
+                <a href="analyse.html">Actualités</a>
+                <a href="vidéo.html">Vidéo</a>
             </div>
             <div class="footer-section">
                 <h4>Réseaux sociaux</h4>
-                <a href="#">Twitter</a>
-                <a href="#">TikTok</a>
-                <a href="#">YouTube</a>
-                <a href="#">Instagram</a>
+                <a href="https://x.com/blackultur_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank">Twitter</a>
+                <a href="https://www.tiktok.com/@blackultur_?is_from_webapp=1&sender_device=pc" target="_blank">TikTok</a>
+                <a href="https://www.youtube.com/@blackultur_" target="_blank">YouTube</a>
+                <a href="https://www.instagram.com/blackultur_/" target="_blank">Instagram</a>
             </div>
         </div>
         <div class="footer-bottom">
