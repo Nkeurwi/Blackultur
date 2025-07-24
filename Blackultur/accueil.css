@@ -373,7 +373,8 @@ body {
 
 /* Classes dupliquées - à fusionner avec .article-card */
 .article-card-2,
-.article-card-3 {
+.article-card-3,
+.article-card-4 {
     min-width: 300px;
     background: #1a1a1a;
     border: 2px solid #fff;
@@ -387,7 +388,8 @@ body {
 }
 
 .article-card-2:hover,
-.article-card-3:hover {
+.article-card-3:hover,
+.article-card-4:hover {
     transform: translateY(-5px);
 }
 
@@ -477,7 +479,8 @@ body {
 /* Indicateurs du carousel */
 .carousel-dots,
 .carousel-dots2,
-.carousel-dots3 {
+.carousel-dots3,
+.carousel-dots4 {
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -486,7 +489,8 @@ body {
 
 .carousel-dot,
 .carousel-dot2,
-.carousel-dot3 {
+.carousel-dot3,
+.carousel-dot4 {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -497,7 +501,8 @@ body {
 
 .carousel-dot.active,
 .carousel-dot2.active,
-.carousel-dot3.active {
+.carousel-dot3.active,
+.carousel-dot4.active {
     background: #667eea;
     transform: scale(1.2);
 }
