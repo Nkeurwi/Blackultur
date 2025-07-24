@@ -19,7 +19,7 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Accueil</a></li>
-                    <li><a href="#" class="active">Rap</a></li>
+                    <li><a href="#" class="active">Musique</a></li>
                     <li><a href="culture.html">Culture</a></li>
                     <li><a href="analyse.html">Actualités</a></li>
                     <li><a href="vidéo.html">Vidéos</a></li>
@@ -36,7 +36,7 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">RAP</h1>
+            <h1 class="hero-title">MUSIQUE</h1>
             <p class="hero-subtitle">Sorties • Actualités • Concerts</p>
         </div>
     </section>
@@ -44,16 +44,16 @@
     <div class="categories-bar">
         <div class="categories-container">
             <nav class="categories-nav">
-                <button class="window-nav" onclick="moveWindow('Rapfr',-300)">Rap FR</button>
-                <button class="window-nav">Rap US</button>
-                <button class="window-nav">Rap Internationale</button>
+                <button class="window-nav" onclick="moveWindow('Rapfr',-300)">FR</button>
+                <button class="window-nav" onclick="moveWindow('RapUs',-300)">US</button>
+                <button class="window-nav" onclick="moveWindow('Inter',-300)">Internationale</button>
             </nav>
         </div>
     </div>
 
     <div class="article-container">
         <main class="articles-section">
-            <h2 id="Rapfr">Rap FR</h2>
+            <h2 class="article-title" id="Rapfr">FR</h2>
 
             <article class="second-grid">
 
@@ -121,41 +121,111 @@
 
             </article>
 
-            <article class="carousel-container2">
+            <div class="carousel-container" id="carousel-container-4">
                     <h2 class="carousel-title">En 2025 tu dois suivre ...</h2>
                     <div class="carousel-wrapper">
-                        <div class="carousel">
+                        <div class="carousel" id="carousel-4">
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
-                            <div class="article-card">
+                            <div class="article-card-4">
                                 <div class="article-image"></div>
                             </div>
 
                         </div>
                     </div>
-                </article>
 
+                    <button class="carousel-nav carousel-prev" onclick="moveCarousel4(-1)">‹</button>
+                    <button class="carousel-nav carousel-next" onclick="moveCarousel4(1)">›</button>
+
+                    <div class="carousel-dots4" id="dots-4"></div>
+            </div>
         </main>
     </div> 
+
+    <div class="article-container">
+        <main class="articles-section">
+            <h2 class="article-title" id="RapUs">US</h2>
+
+            <article class="articles-grid">
+
+                <a href="#">
+                    <article class="featured-article">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <span class="article-category">R&B</span>
+                            <h3 class="article-title"></h3>
+                            <p class="article-excerpt"></p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="article-card">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <span class="article-category">Rap</span>
+                            <h3 class="article-title"></h3>
+                            <p class="article-excerpt"></p>
+                        </div>
+                    </article>
+                </a>
+
+            </article>
+
+        </main>
+    </div>
+
+    <div class="article-container">
+        <main class="articles-section">
+            <h2 class="article-title" id="Inter">Internationale</h2>
+
+            <article class="articles-grid">
+
+                <a href="#">
+                    <article class="featured-article">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <span class="article-category">R&B</span>
+                            <h3 class="article-title"></h3>
+                            <p class="article-excerpt"></p>
+                        </div>
+                    </article>
+                </a>
+
+                <a href="#">
+                    <article class="article-card">
+                        <div class="article-image"></div>
+                        <div class="article-content">
+                            <span class="article-category">Rap</span>
+                            <h3 class="article-title"></h3>
+                            <p class="article-excerpt"></p>
+                        </div>
+                    </article>
+                </a>
+
+            </article>
+
+        </main>
+    </div>
 
     <footer class="footer">
         <div class="footer-content">
